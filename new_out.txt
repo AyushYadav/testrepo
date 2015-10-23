@@ -1,0 +1,10 @@
+
+
+The Student Rankings are :
+
+Ayush scored marks= 10
+Chandan scored marks= 4
+Rajat scored marks= 6
+Nikhil scored marks= 7
+Samriddhi scored marks= 8
+Shubham scored marks= 9

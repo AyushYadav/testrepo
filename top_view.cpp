@@ -1,17 +1,16 @@
-//Added to check GIT version control and test
-#include <stdio.h>
+//Added check GIT
 #include <iostream>
 #include <map>
 #include <vector>
 
 using namespace std;
-
+//A tree structure to store the individual nodes
 struct node{
 	int data;
 	node* left;
 	node* right;
 };
-
+//makes the root node of the tree
 node* makeRoot(int val){
 	node* temp=(node*)malloc(sizeof(node));
 	temp->data=val;
@@ -34,7 +33,7 @@ node* makeRoot(int val){
 // 		makeNode(root->right,val);	
 // }
 
-
+//makes the nodes of the tree according to the binary search tree 
 void makeNode(node* root, int val){
 	if(root->data>val){
 		if(root->left==NULL){
@@ -59,7 +58,7 @@ void makeNode(node* root, int val){
 		makeNode(root->right,val);
 	}
 }
-
+//print the inorder traversal of the tree
 void Inorder(node *root) {
     if(root){        
         Inorder(root->left);
@@ -69,14 +68,14 @@ void Inorder(node *root) {
     else
         return;
 }
-
+//function to print the vertical order of the tree 
 void getVertOrd(node* root,map<int, vector<int> > &m,int d){
 	if(root==NULL)return;
 	m[d].push_back(root->data);
 	getVertOrd(root->left,m,(d-1));
 	getVertOrd(root->right,m,(d+1));
 }
-
+//Utility for the vertical order traversal
 void vertical_order(node *root){
 	map <int, vector<int> > m;
 	getVertOrd(root,m,0);
@@ -91,7 +90,7 @@ void vertical_order(node *root){
 		}
 	}
 }
-
+//Main function to test the code
 int main(){
 	node* n=makeRoot(10);
 	makeNode(n,5);
@@ -107,3 +106,4 @@ int main(){
 	cout<<"Vertical Order traversal is:\n";
 	vertical_order(n);
 }
+//Runs just fine

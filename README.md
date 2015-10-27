@@ -1,2 +1,2 @@
 # testrepo
-Just the basics of Python codes from level 0 to a few other basics. 
+My basic codes while learning concepts of datastructures and some Python.

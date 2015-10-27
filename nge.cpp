@@ -5,11 +5,13 @@
 
 using namespace std;
 
+//Stack data structure with array implementation
 struct stack{
 	int top;
 	int ar[MAX_SIZE];
 };
 
+//to push to an element to stack
 void push(stack* s, int e){
 	if(s->top==(MAX_SIZE-1)){
 		cout<<"OVERFLOW\n";
@@ -20,6 +22,7 @@ void push(stack* s, int e){
 	}
 }
 
+//to pop and element and return from stack
 int pop(stack* s){
 	if(s->top<0){
 		cout<<"UNDERFLOW\n";
@@ -31,12 +34,17 @@ int pop(stack* s){
 	}
 }
 
+//to check if stack is empty or not
+//return 1 if empty else 0
 int isEmpty(stack* s){
 	if(s->top<0)
 		return 1;
 	else return 0;
 }
 
+//prints the next greatest integer in the provided array using the algo as described in the following link
+//   http://www.geeksforgeeks.org/next-greater-element/
+//using stack data structure
 void nextGE(int arr[], int n){
 	stack s;
 	s.top=-1;
@@ -63,9 +71,11 @@ void nextGE(int arr[], int n){
 	}
 }
 
+//Driver main funstion to test the function
 int main(){
 	int test_ar[]={11,13,21,3};
 	nextGE(test_ar,4);
 	return 1;
 }
+//Works Fine and in resonable time 
 

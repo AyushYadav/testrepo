@@ -71,7 +71,7 @@ void nextGE(int arr[], int n){
 	}
 }
 
-//Driver main funstion to test the function
+//Driver main function to test the function
 int main(){
 	int test_ar[]={11,13,21,3};
 	nextGE(test_ar,4);
